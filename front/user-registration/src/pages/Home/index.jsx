@@ -1,15 +1,17 @@
-import { useEffect } from 'react'
+import { useEffect,  useState } from 'react'
 import './style.css'
 import Trash from '../../assets/icons-trash.svg'
 import api from '../../services/api'
 
 function Home() {
 
-  let users = []
+  const [users, setUsers] = useState([])
 
   async function getUsers() {
 
-    users = await api.get('/users')
+    const usersFromApi = await api.get('/users')
+
+    setUsers(usersFromApi.data)
   }
 
   useEffect (() => {
