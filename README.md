@@ -9,8 +9,8 @@ Run inside the api folder</p>
 
 <p>To run frontend: npm run dev<br>
 Run inside the front\user-registration folder</p>
-
-<ul> Technologies used
+<br>
+<ul><strong>Technologies used</strong><br>
     <li><strong>React.js</strong>: Frontend</li>
     <li><strong>Node.js</strong>: Backend</li>
     <li><strong>Express.js</strong>: Framework for Node.js</li>
