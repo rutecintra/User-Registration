@@ -30,10 +30,18 @@ function Home() {
     getUsers()
   }
 
+  async function deleteUsers(id) {
+
+    await api.delete(`/users/${id}`)
+
+    getUsers()
+  }
+
   useEffect (() => {
     getUsers()
   }, [])
   
+
   return (
     
     <div className='container'>
@@ -60,7 +68,7 @@ function Home() {
 
           </div>
 
-          <button>
+          <button onClick={() => deleteUsers(user.id)}>
             <img src={Trash} />
           </button>
 
